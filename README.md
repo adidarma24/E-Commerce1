@@ -31,7 +31,7 @@ ADISHOP adalah aplikasi e-commerce berbasis Laravel + Livewire + Filament untuk 
 
 1. **Clone repository**
    ```powershell
-   git clone <repo-url> && cd ECommerce1
+   git clone https://github.com/adidarma24/E-Commerce1.git && cd ECommerce1
    ```
 2. **Install dependency PHP**
    ```powershell
