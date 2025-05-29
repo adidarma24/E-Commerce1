@@ -42,7 +42,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini secara lokal:
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/username/laravel-ecommerce.git
+git clone https://github.com/adidarma24/E-Commerce1.git
 cd laravel-ecommerce
 ```
 
