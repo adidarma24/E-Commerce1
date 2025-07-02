@@ -1,61 +1,245 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<<<<<<< HEAD
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# ADISHOP E-Commerce
 
-## About Laravel
+ADISHOP adalah aplikasi e-commerce berbasis Laravel + Livewire + Filament untuk penjualan produk elektronik seperti smartphone, laptop, smartwatch, televisi, dan lainnya.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Fitur Utama
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   Manajemen produk, kategori, dan brand
+-   Keranjang belanja dan checkout
+-   Manajemen pesanan (order) dan alamat pengiriman
+-   Pembayaran Cash on Delivery & Stripe (dummy)
+-   Dashboard admin dengan Filament
+-   Review pelanggan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Screenshot
 
-## Learning Laravel
+![Tampilan ADISHOP](/storage/imgradme/img1.png)
+![Tampilan ADISHOP](/storage/imgradme/img2.png)
+![Tampilan ADISHOP](/storage/imgradme/img3.png)
+![Tampilan ADISHOP](/storage/imgradme/img4.png)
+![Tampilan ADISHOP](/storage/imgradme/img5.png)
+![Tampilan ADISHOP](/storage/imgradme/img6.png)
+![Tampilan ADISHOP](/storage/imgradme/img7.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Struktur Database
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   **users**: data pengguna
+-   **categories**: kategori produk
+-   **brands**: brand produk
+-   **products**: data produk
+-   **orders**: data pesanan
+-   **order_items**: detail item pesanan
+-   **addresses**: alamat pengiriman
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Instalasi
 
-## Laravel Sponsors
+### Prasyarat
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   PHP >= 8.2
+-   Composer
+-   Node.js & npm
+-   MySQL/MariaDB
 
-### Premium Partners
+### Langkah Instalasi
 
--   **[Vehikl](https://vehikl.com)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Curotec](https://www.curotec.com/services/technologies/laravel)**
--   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
--   **[Redberry](https://redberry.international/laravel-development)**
--   **[Active Logic](https://activelogic.com)**
+1. **Clone repository**
+    ```powershell
+    git clone <repo-url> && cd ECommerce1
+    ```
+2. **Install dependency PHP**
+    ```powershell
+    composer install
+    ```
+3. **Install dependency frontend**
+    ```powershell
+    npm install
+    ```
+4. **Copy file environment**
+    ```powershell
+    copy .env.example .env
+    ```
+5. **Generate app key**
+    ```powershell
+    php artisan key:generate
+    ```
+6. **Atur konfigurasi database**
+   Edit `.env` dan sesuaikan DB_DATABASE, DB_USERNAME, DB_PASSWORD.
+7. **Jalankan migrasi dan seeder**
+    ```powershell
+    php artisan migrate --seed
+    ```
+8. **Build asset frontend**
+    ```powershell
+    npm run build
+    # atau untuk development
+    npm run dev
+    ```
+9. **Jalankan server**
+    ```powershell
+    php artisan serve
+    ```
+10. **Akses aplikasi**
+    Buka browser ke [http://localhost:8000](http://localhost:8000)
 
-## Contributing
+### Instalasi Filament
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Jalankan perintah berikut untuk menginstal Filament (jika belum):
+    ```powershell
+    composer require filament/filament
+    ```
+2. Publish aset Filament:
+    ```powershell
+    php artisan filament:install
+    ```
+3. Jalankan migrasi jika diminta:
+    ```powershell
+    php artisan migrate
+    ```
+4. Akses dashboard admin di `/admin`.
 
-## Code of Conduct
+## Akun Default
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   Email: test@example.com
+-   Password: password (ubah di database jika perlu)
 
-## Security Vulnerabilities
+## Catatan
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   Untuk akses admin, buka `/admin` setelah login.
+-   Fitur pembayaran Stripe hanya simulasi.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> # Dibuat dengan Laravel 12, Livewire 3, Filament 3, TailwindCSS, Vite.
+
+# 🛒 E-Commerce Project with Laravel 12, Livewire 3, Filament 3 & Tailwind CSS
+
+Proyek ini adalah aplikasi E-Commerce modern berbasis **Laravel 12** yang menggunakan **Livewire 3** untuk interaktivitas real-time, **Filament 3** sebagai dashboard admin yang powerful, dan **Tailwind CSS** untuk antarmuka yang responsif dan elegan.
+
+## 🚀 Fitur Utama
+
+-   🔧 **Manajemen Produk, Kategori, dan Brand**  
+    Admin dapat membuat, mengedit, dan menghapus produk beserta kategorinya dan brand menggunakan Filament Panel.
+
+-   🛍️ **Keranjang Belanja & Checkout**  
+    Pengguna dapat menambahkan produk ke keranjang dan melakukan proses checkout dengan mudah.
+
+-   📦 **Manajemen Pesanan & Alamat Pengiriman**  
+    Setiap pesanan dicatat bersama detail item dan alamat pengiriman pengguna.
+
+-   💳 **Pembayaran Cash on Delivery & Stripe (Dummy)**  
+    Mendukung metode pembayaran Cash on Delivery dan simulasi pembayaran menggunakan Stripe.
+
+-   📊 **Dashboard Admin (Filament 3)**  
+    Admin dapat mengelola seluruh data aplikasi dari dashboard Filament yang intuitif.
+
+-   ⭐ **Review Pelanggan**  
+    Pengguna dapat memberikan ulasan pada produk yang telah dibeli.
+
+## 🗂️ Struktur Database
+
+Berikut adalah tabel utama dalam aplikasi:
+
+| Tabel         | Deskripsi                                  |
+| ------------- | ------------------------------------------ |
+| `users`       | Data pengguna termasuk pelanggan dan admin |
+| `categories`  | Kategori dari produk yang dijual           |
+| `brands`      | Brand atau merek dari produk               |
+| `products`    | Informasi produk seperti nama, harga, stok |
+| `orders`      | Data pesanan pelanggan                     |
+| `order_items` | Detail setiap produk dalam pesanan         |
+| `addresses`   | Alamat pengiriman yang digunakan           |
+
+## ⚙️ Instalasi & Setup
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini secara lokal:
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/adidarma24/E-Commerce1.git
+cd laravel-ecommerce
+```
+
+### 2. Install dependency PHP dan JavaScript
+
+```bash
+composer install
+npm install && npm run dev
+```
+
+### 3. Konfigurasi file environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+### 4. Setup database
+
+-   Buat database baru di MySQL/PostgreSQL (nama bebas)
+-   Edit file `.env` sesuai konfigurasi database Anda
+
+Contoh konfigurasi:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ecommerce_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 5. Migrasi dan seeding database
+
+```bash
+php artisan migrate --seed
+```
+
+### 6. Jalankan server lokal
+
+```bash
+php artisan serve
+```
+
+Aplikasi dapat diakses melalui:  
+`http://localhost:8000`
+
+## 🔐 Akses Admin
+
+Setelah seeding, Anda dapat login ke dashboard admin di:
+
+**URL:** `/admin`
+
+**Login Default (dari seeder):**
+
+-   Email: `admin@example.com`
+-   Password: `password`
+
+## 📚 Teknologi yang Digunakan
+
+-   Laravel 12
+-   Livewire 3
+-   Filament 3
+-   Tailwind CSS
+-   Stripe (Dummy)
+-   MySQL / PostgreSQL
+-   Alpine.js (untuk komponen UI interaktif)
+
+## ✅ To-Do (Pengembangan Lanjutan)
+
+-   Integrasi pembayaran real (Stripe / Midtrans)
+-   Fitur wishlist & notifikasi
+-   Manajemen pengiriman & resi
+-   Multi-role user (Admin, Customer)
+-   Email notifikasi & invoice PDF
+
+## 📄 Lisensi
+
+Proyek ini dirilis di bawah lisensi [MIT](LICENSE). Bebas digunakan untuk keperluan pribadi maupun komersial dengan mencantumkan atribusi.
+
+---
+
+> > > > > > > 1dbde3c19f9547f0059672086eb5635e4df6287b
