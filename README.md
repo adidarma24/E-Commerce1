@@ -15,13 +15,13 @@ ADISHOP adalah aplikasi e-commerce berbasis Laravel + Livewire + Filament untuk 
 
 ## Screenshot
 
-![Tampilan ADISHOP](/storage/imgradme/img1.png)
-![Tampilan ADISHOP](/storage/imgradme/img2.png)
-![Tampilan ADISHOP](/storage/imgradme/img3.png)
-![Tampilan ADISHOP](/storage/imgradme/img4.png)
-![Tampilan ADISHOP](/storage/imgradme/img5.png)
-![Tampilan ADISHOP](/storage/imgradme/img6.png)
-![Tampilan ADISHOP](/storage/imgradme/img7.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img1.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img2.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img3.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img4.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img5.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img6.png)
+![Tampilan ADISHOP](/public/strorage/imgradme/img7.png)
 
 ## Struktur Database
 
