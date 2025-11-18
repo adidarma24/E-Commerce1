@@ -11,7 +11,7 @@ ADISHOP adalah aplikasi e-commerce berbasis Laravel + Livewire + Filament untuk 
 -   Dashboard admin dengan Filament
 -   Review pelanggan
 
-## Screenshot
+## 🖼️ Screenshot
 
 ![Tampilan ADISHOP](/Screenshot/img1.png)
 ![Tampilan ADISHOP](/Screenshot/img2.png)
@@ -124,19 +124,6 @@ Proyek ini adalah aplikasi E-Commerce modern berbasis **Laravel 12** yang menggu
 -   📊 **Dashboard Admin (Filament 3)**
 -   ⭐ **Review Pelanggan**
 
----
-
-## 🖼️ Screenshot
-
-> Letakkan gambar-gambar ini di direktori `public/storage/imgradme/`
-
-![Tampilan ADISHOP 1](/storage/imgradme/img1.png)
-![Tampilan ADISHOP 2](/storage/imgradme/img2.png)
-![Tampilan ADISHOP 3](/storage/imgradme/img3.png)
-![Tampilan ADISHOP 4](/storage/imgradme/img4.png)
-![Tampilan ADISHOP 5](/storage/imgradme/img5.png)
-![Tampilan ADISHOP 6](/storage/imgradme/img6.png)
-![Tampilan ADISHOP 7](/storage/imgradme/img7.png)
 
 ---
 
